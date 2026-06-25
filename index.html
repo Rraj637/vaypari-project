@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vaypari - India's leading online fashion & lifestyle destination. Shop Men, Women, Kids, Beauty, Home & more." />
+    <meta name="keywords" content="fashion, online shopping, clothing, shoes, accessories, beauty, home decor, India" />
+    <meta name="author" content="Vaypari" />
+    <meta name="theme-color" content="#ff3f6c" />
+    <title>Vaypari - Online Shopping for Fashion & Lifestyle in India</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==================== SMOOTH BACKGROUND (CITY SKYLINE) ==================== -->
+    <div class="wrap-bg" id="smooth-bg">
+        <div class="bg_area">
+            <div class="bg01 clearfix"></div>
+        </div>
+    </div>
+    <!-- ==================== PRELOADER ==================== -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-holder">
+            <!-- 16 circles for the animation -->
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+    </div>
+
+    <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
+    <div class="announcement-bar" id="announcementBar">
+        <div class="announcement-inner">
+            <span class="announcement-item">🎉 NEW ARRIVALS — Monsoon Collection is LIVE!</span>
+            <span class="announcement-sep">•</span>
+            <span class="announcement-item">🚚 FREE delivery on orders above ₹499</span>
+            <span class="announcement-sep">•</span>
+            <span class="announcement-item">🔁 Easy 30-Day Returns</span>
+            <span class="announcement-sep">•</span>
+            <span class="announcement-item">💳 10% off with HDFC cards — Use: HDFC10</span>
+        </div>
+        <button class="announcement-close" id="announcementClose" aria-label="Close announcement">✕</button>
+    </div>
+
+    <!-- ==================== MAIN HEADER ==================== -->
+    <header class="main-header" id="mainHeader">
+        <div class="header-inner">
+
+            <!-- Hamburger (Mobile) -->
+            <button class="hamburger-menu" id="hamburger" aria-label="Open menu" type="button">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- Logo -->
+            <a href="index.html" class="logo" aria-label="Vaypari Home">
+                <span class="logo-text">vaypari</span>
+                <span class="logo-tag">India's Fashion Hub</span>
+            </a>
+
+            <!-- Search -->
+            <div class="search-wrapper search-animated">
+                <span class="search-icon">🔍</span>
+                <input id="searchInput" type="text" class="search-input" placeholder="Search for products, brands and more" autocomplete="off" />
+                <div class="search-suggestions" id="searchSuggestions">
+                    <div class="suggestion-group">
+                        <p class="suggestion-label">TRENDING SEARCHES</p>
+                        <a href="#" class="suggestion-item">👗 Ethnic Wear for Women</a>
+                        <a href="#" class="suggestion-item">👟 Sports Shoes for Men</a>
+                        <a href="#" class="suggestion-item">💄 Lipstick Collections</a>
+                        <a href="#" class="suggestion-item">🛋️ Home Décor Essentials</a>
+                        <a href="#" class="suggestion-item">👜 Handbags & Wallets</a>
+                    </div>
+                </div>
+                <button type="button" class="search-btn" id="searchBtn">SEARCH</button>
+            </div>
+
+            <!-- Right Icons -->
+            <nav class="header-actions" aria-label="User actions">
+                <div class="action-item" id="profileDropdownTrigger">
+                    <span class="action-icon">👤</span>
+                    <span class="action-label">Profile</span>
+                    <div class="profile-dropdown" id="profileDropdown">
+                        <div class="profile-header">
+                            <p>Hello!</p>
+                            <p class="profile-sub">Access account & manage orders</p>
+                        </div>
+                        <div class="profile-links">
+                            <a href="orders.html">📦 My Orders</a>
+                            <a href="reviews.html">💬 My Reviews & Ratings</a>
+                            <a href="qa.html">❓ My Questions & Answers</a>
+                            <a href="coupons.html">🎫 My Coupons</a>
+                            <a href="credit.html">🎁 Vaypari Credit</a>
+                            <a href="settings.html">⚙️ Account Settings</a>
+                        </div>
+                        <div class="profile-footer">
+                            <a href="#" class="profile-login-btn">LOGIN / SIGNUP</a>
+                            <span>Seller: <a href="#">Sell on Vaypari</a></span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="action-item wishlist">
+                    <span class="action-icon">❤️</span>
+                    <span class="action-label">Wishlist</span>
+                    <span class="wishlist-count" id="wishlistCount">0</span>
+                </a>
+                <a href="#" class="action-item cart-action">
+                    <span class="action-icon">🛍️</span>
+                    <span class="action-label">Bag</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- ==================== NAVIGATION BAR ==================== -->
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="nav-inner">
+                <div class="nav-item nav-dropdown" data-cat="men">
+                    <a href="#" class="nav-link">Men</a>
+                    <div class="mega-dropdown">
+                        <div class="mega-col">
+                            <h4>Top Wear</h4>
+                            <a href="#">T-Shirts</a><a href="#">Casual Shirts</a><a href="#">Formal Shirts</a>
+                            <a href="#">Sweatshirts</a><a href="#">Hoodies</a><a href="#">Jackets & Coats</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Bottom Wear</h4>
+                            <a href="#">Jeans</a><a href="#">Casual Trousers</a><a href="#">Formal Trousers</a>
+                            <a href="#">Shorts</a><a href="#">Track Pants</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Ethnic Wear</h4>
+                            <a href="#">Kurtas & Kurta Sets</a><a href="#">Sherwanis</a><a href="#">Ethnic Jackets</a>
+                            <a href="#">Mundus</a><a href="#">Nehru Jackets</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Footwear</h4>
+                            <a href="#">Casual Shoes</a><a href="#">Sports Shoes</a><a href="#">Formal Shoes</a>
+                            <a href="#">Sandals & Floaters</a><a href="#">Loafers & Moccasins</a>
+                        </div>
+                        <div class="mega-col mega-brands">
+                            <h4>Top Brands</h4>
+                            <a href="#" class="brand-pill">H&M</a>
+                            <a href="#" class="brand-pill">Puma</a>
+                            <a href="#" class="brand-pill">Zara</a>
+                            <a href="#" class="brand-pill">Nike</a>
+                            <a href="#" class="brand-pill">Levi's</a>
+                            <a href="#" class="brand-pill">US Polo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-dropdown" data-cat="women">
+                    <a href="#" class="nav-link">Women</a>
+                    <div class="mega-dropdown">
+                        <div class="mega-col">
+                            <h4>Indian & Fusion</h4>
+                            <a href="#">Kurtas & Suits</a><a href="#">Sarees</a><a href="#">Lehengas</a>
+                            <a href="#">Salwar Suits</a><a href="#">Ethnic Jackets</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Western Wear</h4>
+                            <a href="#">Dresses</a><a href="#">Tops</a><a href="#">T-Shirts</a>
+                            <a href="#">Jeans</a><a href="#">Trousers & Capris</a><a href="#">Co-ords</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Footwear</h4>
+                            <a href="#">Heels</a><a href="#">Flats</a><a href="#">Sandals</a>
+                            <a href="#">Boots</a><a href="#">Sports Shoes</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Accessories</h4>
+                            <a href="#">Handbags</a><a href="#">Jewellery</a><a href="#">Watches</a>
+                            <a href="#">Sunglasses</a><a href="#">Belts</a>
+                        </div>
+                        <div class="mega-col mega-brands">
+                            <h4>Top Brands</h4>
+                            <a href="#" class="brand-pill">Libas</a>
+                            <a href="#" class="brand-pill">AND</a>
+                            <a href="#" class="brand-pill">W</a>
+                            <a href="#" class="brand-pill">Biba</a>
+                            <a href="#" class="brand-pill">Global Desi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-dropdown" data-cat="kids">
+                    <a href="#" class="nav-link">Kids</a>
+                    <div class="mega-dropdown">
+                        <div class="mega-col">
+                            <h4>Boys Clothing</h4>
+                            <a href="#">T-Shirts</a><a href="#">Shirts</a><a href="#">Shorts</a><a href="#">Jeans</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Girls Clothing</h4>
+                            <a href="#">Dresses</a><a href="#">Tops</a><a href="#">Ethnic Sets</a><a href="#">Jeans</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Footwear & More</h4>
+                            <a href="#">School Shoes</a><a href="#">Sandals</a><a href="#">Toys</a><a href="#">Baby Care</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-dropdown" data-cat="home">
+                    <a href="#" class="nav-link">Home & Living</a>
+                    <div class="mega-dropdown">
+                        <div class="mega-col">
+                            <h4>Bed & Bath</h4>
+                            <a href="#">Bedsheets</a><a href="#">Blankets</a><a href="#">Towels</a><a href="#">Pillows</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Kitchen</h4>
+                            <a href="#">Cookware</a><a href="#">Storage</a><a href="#">Dinnerware</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Décor</h4>
+                            <a href="#">Wall Art</a><a href="#">Candles</a><a href="#">Vases</a><a href="#">Clocks</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-dropdown" data-cat="beauty">
+                    <a href="#" class="nav-link">Beauty</a>
+                    <div class="mega-dropdown">
+                        <div class="mega-col">
+                            <h4>Skincare</h4>
+                            <a href="#">Face Wash</a><a href="#">Moisturiser</a><a href="#">Sunscreen</a><a href="#">Serums</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Makeup</h4>
+                            <a href="#">Lipstick</a><a href="#">Foundation</a><a href="#">Mascara</a><a href="#">Eyeliner</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Haircare</h4>
+                            <a href="#">Shampoo</a><a href="#">Conditioner</a><a href="#">Hair Oil</a><a href="#">Serums</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="#" class="nav-link">Sports</a></div>
+                <div class="nav-item"><a href="#" class="nav-link">Luggage</a></div>
+                <div class="nav-item nav-sale"><a href="#" class="nav-link">SALE 🔥</a></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+
+        <!-- ==================== HERO BANNER SLIDER ==================== -->
+        <section class="hero-slider" aria-label="Featured promotions">
+            <canvas id="heroCanvas"></canvas>
+            <div class="slider-track" id="sliderTrack">
+                <div class="slide slide-1">
+                    <div class="slide-content">
+                        <span class="slide-tag">MONSOON SALE 2026</span>
+                        <h1>Get Soaked in <br><em>Style</em></h1>
+                        <p>Up to 70% off on top brands — only this week.</p>
+                        <div class="slide-ctas">
+                            <a href="#" class="cta-btn cta-primary">Shop Women</a>
+                            <a href="#" class="cta-btn cta-secondary">Shop Men</a>
+                        </div>
+                        <div class="slide-badges">
+                            <span>Free Delivery ✓</span>
+                            <span>Easy Returns ✓</span>
+                            <span>Cash on Delivery ✓</span>
+                        </div>
+                    </div>
+                    <div class="slide-visual slide-visual-1"></div>
+                </div>
+                <div class="slide slide-2">
+                    <div class="slide-content">
+                        <span class="slide-tag">ETHNIC EXTRAVAGANZA</span>
+                        <h1>Celebrate Every <br><em>Occasion</em></h1>
+                        <p>Curated ethnic collections for the modern Indian.</p>
+                        <div class="slide-ctas">
+                            <a href="#" class="cta-btn cta-primary">Explore Now</a>
+                        </div>
+                    </div>
+                    <div class="slide-visual slide-visual-2"></div>
+                </div>
+                <div class="slide slide-3">
+                    <div class="slide-content">
+                        <span class="slide-tag">BEAUTY DROP</span>
+                        <h1>Glow Like <br><em>Never Before</em></h1>
+                        <p>New arrivals from top beauty brands at unbeatable prices.</p>
+                        <div class="slide-ctas">
+                            <a href="#" class="cta-btn cta-primary">Shop Beauty</a>
+                        </div>
+                    </div>
+                    <div class="slide-visual slide-visual-3"></div>
+                </div>
+            </div>
+            <button class="slider-btn prev" id="sliderPrev" aria-label="Previous slide">‹</button>
+            <button class="slider-btn next" id="sliderNext" aria-label="Next slide">›</button>
+            <div class="slider-dots" id="sliderDots">
+                <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+            </div>
+        </section>
+
+        <!-- ==================== CATEGORY ICON STRIP ==================== -->
+        <section class="cat-strip container-fluid" aria-label="Shop by category">
+            <div class="cat-strip-inner">
+                <a href="#" class="cat-icon-item">
+                    <div class="cat-icon-circle cat-women">👗</div>
+                    <span>Women</span>
+                </a>
+                <a href="#" class="cat-icon-item">
+                    <div class="cat-icon-circle cat-men">👔</div>
+                    <span>Men</span>
+                </a>
+                <a href="#" class="cat-icon-item">
+                    <div class="cat-icon-circle cat-kids">🧒</div>
+                    <span>Kids</span>
+                </a>
+                <a href="#" class="cat-icon-item">
+                    <div class="cat-icon-circle cat-beauty">💄</div>
+                    <span>Beauty</span>
+                </a>
+                <a href="#" class="cat-icon-item">
+                    <div class="cat-icon-circle cat-home">🛋️</div>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="cat-icon-item">
+                    <div class="cat-icon-circle cat-sports">⚽</div>
+                    <span>Sports</span>
+                </a>
+                <a href="#" class="cat-icon-item">
+                    <div class="cat-icon-circle cat-ethnic">🥻</div>
+                    <span>Ethnic</span>
+                </a>
+                <a href="#" class="cat-icon-item">
+                    <div class="cat-icon-circle cat-footwear">👟</div>
+                    <span>Footwear</span>
+                </a>
+                <a href="#" class="cat-icon-item">
+                    <div class="cat-icon-circle cat-accessories">💍</div>
+                    <span>Accessories</span>
+                </a>
+                <a href="#" class="cat-icon-item">
+                    <div class="cat-icon-circle cat-sale">🔥</div>
+                    <span>Sale</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ==================== FLASH SALE STRIP ==================== -->
+        <section class="flash-sale-strip container-fluid" aria-label="Flash sale">
+            <div class="flash-sale-left">
+                <span class="flash-tag">⚡ FLASH SALE</span>
+                <h2>Up to 80% Off — Today Only!</h2>
+                <p>Hurry, limited stock available across 2,000+ styles.</p>
+            </div>
+            <div class="flash-sale-timer">
+                <div class="timer-block"><span id="timerH">03</span><em>Hours</em></div>
+                <span class="timer-colon">:</span>
+                <div class="timer-block"><span id="timerM">18</span><em>Mins</em></div>
+                <span class="timer-colon">:</span>
+                <div class="timer-block"><span id="timerS">22</span><em>Secs</em></div>
+            </div>
+            <a href="#" class="flash-cta">Shop Now →</a>
+        </section>
+
+        <!-- ==================== TRENDING NOW — PRODUCT GRID ==================== -->
+        <section class="section-block container-fluid" aria-labelledby="trending-heading">
+            <div class="section-header">
+                <div>
+                    <h2 id="trending-heading">Trending Now</h2>
+                    <p>Curated picks our stylists are obsessed with this season</p>
+                </div>
+                <a href="#" class="view-all-link">View All →</a>
+            </div>
+            <div class="product-grid" id="trendingGrid">
+
+                <article class="product-card" data-product="Silk Wrap Dress" data-price="₹1,299">
+                    <div class="product-img-wrap">
+                        <div class="product-img img-fashion-1"></div>
+                        <button class="wishlist-btn" aria-label="Add to wishlist" data-index="0">❤</button>
+                        <span class="discount-badge">-62%</span>
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand-name">Libas</span>
+                        <h3 class="product-name">Floral Silk Wrap Dress</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(1.2k)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹1,299</span>
+                            <span class="original-price">₹3,499</span>
+                            <span class="off-label">62% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Floral Silk Wrap Dress">+ Add to Bag</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product="Men Slim Fit Chinos" data-price="₹899">
+                    <div class="product-img-wrap">
+                        <div class="product-img img-fashion-2"></div>
+                        <button class="wishlist-btn" aria-label="Add to wishlist" data-index="1">❤</button>
+                        <span class="discount-badge">-50%</span>
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand-name">H&M</span>
+                        <h3 class="product-name">Slim Fit Stretch Chinos</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(3.4k)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹899</span>
+                            <span class="original-price">₹1,799</span>
+                            <span class="off-label">50% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Slim Fit Stretch Chinos">+ Add to Bag</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product="Sports Shoes" data-price="₹2,199">
+                    <div class="product-img-wrap">
+                        <div class="product-img img-fashion-3"></div>
+                        <button class="wishlist-btn" aria-label="Add to wishlist" data-index="2">❤</button>
+                        <span class="discount-badge new-badge">NEW</span>
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand-name">Nike</span>
+                        <h3 class="product-name">Air Max Breathe Running Shoes</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(5.8k)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹2,199</span>
+                            <span class="original-price">₹4,499</span>
+                            <span class="off-label">51% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Air Max Breathe Running Shoes">+ Add to Bag</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product="Kurti Set" data-price="₹699">
+                    <div class="product-img-wrap">
+                        <div class="product-img img-fashion-4"></div>
+                        <button class="wishlist-btn" aria-label="Add to wishlist" data-index="3">❤</button>
+                        <span class="discount-badge">-65%</span>
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand-name">Biba</span>
+                        <h3 class="product-name">Printed Cotton A-Line Kurta</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(4.1k)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹699</span>
+                            <span class="original-price">₹1,999</span>
+                            <span class="off-label">65% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Printed Cotton A-Line Kurta">+ Add to Bag</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product="Face Serum" data-price="₹549">
+                    <div class="product-img-wrap">
+                        <div class="product-img img-beauty-1"></div>
+                        <button class="wishlist-btn" aria-label="Add to wishlist" data-index="4">❤</button>
+                        <span class="discount-badge">-40%</span>
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand-name">Minimalist</span>
+                        <h3 class="product-name">Vitamin C 10% Brightening Serum</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(12.3k)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹549</span>
+                            <span class="original-price">₹899</span>
+                            <span class="off-label">39% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Vitamin C 10% Brightening Serum">+ Add to Bag</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product="Casual Shirt" data-price="₹749">
+                    <div class="product-img-wrap">
+                        <div class="product-img img-fashion-5"></div>
+                        <button class="wishlist-btn" aria-label="Add to wishlist" data-index="5">❤</button>
+                        <span class="discount-badge">-55%</span>
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand-name">US Polo Assn.</span>
+                        <h3 class="product-name">Slim Fit Printed Casual Shirt</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(2.9k)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹749</span>
+                            <span class="original-price">₹1,699</span>
+                            <span class="off-label">56% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Slim Fit Printed Casual Shirt">+ Add to Bag</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product="Tote Bag" data-price="₹1,099">
+                    <div class="product-img-wrap">
+                        <div class="product-img img-accessory-1"></div>
+                        <button class="wishlist-btn" aria-label="Add to wishlist" data-index="6">❤</button>
+                        <span class="discount-badge">-45%</span>
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand-name">Caprese</span>
+                        <h3 class="product-name">Structured Leather Tote Bag</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(876)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹1,099</span>
+                            <span class="original-price">₹1,999</span>
+                            <span class="off-label">45% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Structured Leather Tote Bag">+ Add to Bag</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product="Saree" data-price="₹1,599">
+                    <div class="product-img-wrap">
+                        <div class="product-img img-fashion-6"></div>
+                        <button class="wishlist-btn" aria-label="Add to wishlist" data-index="7">❤</button>
+                        <span class="discount-badge">-70%</span>
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand-name">Koskii</span>
+                        <h3 class="product-name">Banarasi Woven Art Silk Saree</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(3.2k)</span>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹1,599</span>
+                            <span class="original-price">₹5,499</span>
+                            <span class="off-label">71% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Banarasi Woven Art Silk Saree">+ Add to Bag</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ==================== BRAND SPOTLIGHT ==================== -->
+        <section class="section-block container-fluid brand-section" aria-labelledby="brand-heading">
+            <div class="section-header">
+                <div>
+                    <h2 id="brand-heading">Top Brand Stores</h2>
+                    <p>Your favorite labels, all in one place</p>
+                </div>
+                <a href="#" class="view-all-link">All Brands →</a>
+            </div>
+            <div class="brand-grid">
+                <a href="#" class="brand-card brand-hm"><span>H&M</span></a>
+                <a href="#" class="brand-card brand-puma"><span>PUMA</span></a>
+                <a href="#" class="brand-card brand-zara"><span>ZARA</span></a>
+                <a href="#" class="brand-card brand-nike"><span>NIKE</span></a>
+                <a href="#" class="brand-card brand-levis"><span>Levi's</span></a>
+                <a href="#" class="brand-card brand-mango"><span>MANGO</span></a>
+                <a href="#" class="brand-card brand-biba"><span>BIBA</span></a>
+                <a href="#" class="brand-card brand-and"><span>AND</span></a>
+            </div>
+        </section>
+
+        <!-- ==================== PROMO BANNER PAIR ==================== -->
+        <section class="promo-pair container-fluid" aria-label="Promotional banners">
+            <div class="promo-card promo-ethnic">
+                <div class="promo-text">
+                    <span class="promo-tag">🥻 Festive Ready</span>
+                    <h3>Ethnic Wear <br>Starting ₹399</h3>
+                    <p>Sarees, Kurtas, Sherwanis & more</p>
+                    <a href="#" class="promo-btn">Shop Ethnic →</a>
+                </div>
+            </div>
+            <div class="promo-card promo-sport">
+                <div class="promo-text">
+                    <span class="promo-tag">⚽ Active Lifestyle</span>
+                    <h3>Sports Gear <br>Upto 60% Off</h3>
+                    <p>Nike, Puma, Adidas & more</p>
+                    <a href="#" class="promo-btn">Shop Sports →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NEW ARRIVALS ==================== -->
+        <section class="section-block container-fluid" aria-labelledby="new-arrivals-heading">
+            <div class="section-header">
+                <div>
+                    <h2 id="new-arrivals-heading">New Arrivals</h2>
+                    <p>Fresh styles just landed — be first to grab them</p>
+                </div>
+                <a href="#" class="view-all-link">View All New →</a>
+            </div>
+            <div class="arrivals-grid">
+                <div class="arrival-banner arrival-women">
+                    <div class="arrival-overlay">
+                        <h3>Women's Picks</h3>
+                        <p>500+ new styles this week</p>
+                        <a href="#" class="arrival-btn">Explore →</a>
+                    </div>
+                </div>
+                <div class="arrival-banner arrival-men">
+                    <div class="arrival-overlay">
+                        <h3>Men's Picks</h3>
+                        <p>Fresh fits for every occasion</p>
+                        <a href="#" class="arrival-btn">Explore →</a>
+                    </div>
+                </div>
+                <div class="arrival-small-grid">
+                    <div class="arrival-banner arrival-kids">
+                        <div class="arrival-overlay">
+                            <h3>Kids</h3>
+                            <a href="#" class="arrival-btn">Shop →</a>
+                        </div>
+                    </div>
+                    <div class="arrival-banner arrival-beauty">
+                        <div class="arrival-overlay">
+                            <h3>Beauty</h3>
+                            <a href="#" class="arrival-btn">Shop →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== BEAUTY & SKINCARE ==================== -->
+        <section class="section-block container-fluid" aria-labelledby="beauty-heading">
+            <div class="section-header">
+                <div>
+                    <h2 id="beauty-heading">Beauty Must-Haves</h2>
+                    <p>Top rated skincare, makeup and haircare picks</p>
+                </div>
+                <a href="#" class="view-all-link">Shop Beauty →</a>
+            </div>
+            <div class="beauty-row">
+                <article class="beauty-card">
+                    <div class="beauty-img beauty-img-1"></div>
+                    <div class="beauty-info">
+                        <span class="brand-name">Dot & Key</span>
+                        <h3>Watermelon Hyaluronic Face Moisturiser</h3>
+                        <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(8.2k)</span></div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹395</span>
+                            <span class="original-price">₹649</span>
+                            <span class="off-label">39% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Watermelon Hyaluronic Moisturiser">+ Add to Bag</button>
+                    </div>
+                </article>
+                <article class="beauty-card">
+                    <div class="beauty-img beauty-img-2"></div>
+                    <div class="beauty-info">
+                        <span class="brand-name">Sugar Cosmetics</span>
+                        <h3>Matte As Hell Crayon Lipstick</h3>
+                        <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(15.1k)</span></div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹249</span>
+                            <span class="original-price">₹399</span>
+                            <span class="off-label">38% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Matte As Hell Lipstick">+ Add to Bag</button>
+                    </div>
+                </article>
+                <article class="beauty-card">
+                    <div class="beauty-img beauty-img-3"></div>
+                    <div class="beauty-info">
+                        <span class="brand-name">WOW Skin Science</span>
+                        <h3>Apple Cider Vinegar Shampoo</h3>
+                        <div class="product-rating"><span class="stars">★★★★☆</span><span class="rating-count">(21k)</span></div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹299</span>
+                            <span class="original-price">₹499</span>
+                            <span class="off-label">40% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Apple Cider Vinegar Shampoo">+ Add to Bag</button>
+                    </div>
+                </article>
+                <article class="beauty-card">
+                    <div class="beauty-img beauty-img-4"></div>
+                    <div class="beauty-info">
+                        <span class="brand-name">Lakme</span>
+                        <h3>Sun Expert SPF 50 PA+++ Sunscreen</h3>
+                        <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(9.6k)</span></div>
+                        <div class="product-pricing">
+                            <span class="current-price">₹349</span>
+                            <span class="original-price">₹599</span>
+                            <span class="off-label">42% off</span>
+                        </div>
+                        <button class="add-to-bag-btn add-button" data-product="Lakme Sun Expert Sunscreen">+ Add to Bag</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== LOOKBOOK / EDITORIAL ==================== -->
+        <section class="section-block container-fluid lookbook-section" aria-labelledby="lookbook-heading">
+            <div class="section-header">
+                <div>
+                    <h2 id="lookbook-heading">Style Stories</h2>
+                    <p>Curated edits and looks for every mood and moment</p>
+                </div>
+            </div>
+            <div class="lookbook-grid">
+                <article class="lookbook-card lookbook-large">
+                    <div class="lookbook-img lb-monsoon"></div>
+                    <div class="lookbook-overlay">
+                        <span class="lb-tag">SUMMER 2026</span>
+                        <h3>Monsoon Edit</h3>
+                        <p>Flowing fabrics and earthy tones for rainy days done right</p>
+                        <a href="#" class="lb-btn">View Lookbook →</a>
+                    </div>
+                </article>
+                <article class="lookbook-card">
+                    <div class="lookbook-img lb-office"></div>
+                    <div class="lookbook-overlay">
+                        <span class="lb-tag">WORKWEAR</span>
+                        <h3>Office Chic</h3>
+                        <p>Power dressing for the modern professional</p>
+                        <a href="#" class="lb-btn">Explore →</a>
+                    </div>
+                </article>
+                <article class="lookbook-card">
+                    <div class="lookbook-img lb-wedding"></div>
+                    <div class="lookbook-overlay">
+                        <span class="lb-tag">WEDDING SEASON</span>
+                        <h3>Shaadi Special</h3>
+                        <p>Bridal, groom & guest outfits for every function</p>
+                        <a href="#" class="lb-btn">Explore →</a>
+                    </div>
+                </article>
+                <article class="lookbook-card">
+                    <div class="lookbook-img lb-casual"></div>
+                    <div class="lookbook-overlay">
+                        <span class="lb-tag">CASUAL DAYS</span>
+                        <h3>Weekend Vibes</h3>
+                        <p>Effortless looks for brunches, outings & lazy days</p>
+                        <a href="#" class="lb-btn">Explore →</a>
+                    </div>
+                </article>
+                <article class="lookbook-card">
+                    <div class="lookbook-img lb-athleisure"></div>
+                    <div class="lookbook-overlay">
+                        <span class="lb-tag">SPORT & LEISURE</span>
+                        <h3>Athleisure Life</h3>
+                        <p>Performance meets street style, every single day</p>
+                        <a href="#" class="lb-btn">Explore →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== CUSTOMER REVIEWS ==================== -->
+        <section class="section-block container-fluid reviews-section" aria-labelledby="reviews-heading">
+            <div class="section-header">
+                <div>
+                    <h2 id="reviews-heading">What Shoppers Say</h2>
+                    <p>Verified reviews from real Vaypari customers</p>
+                </div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar rv1">P</div>
+                        <div>
+                            <strong>Priya M.</strong>
+                            <span class="reviewer-badge">Verified Buyer</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Absolutely loved the quality of the kurta! The fabric is so soft and the print is exactly as shown. Delivered in 2 days. Will shop again!"</p>
+                    <span class="review-product">Biba Floral Kurta Set</span>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar rv2">R</div>
+                        <div>
+                            <strong>Rahul S.</strong>
+                            <span class="reviewer-badge">Verified Buyer</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The Nike shoes are absolutely comfortable. Wore them for a 10km run and my feet felt great. Great discount too — saved ₹2,300!"</p>
+                    <span class="review-product">Nike Air Max Running Shoes</span>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar rv3">A</div>
+                        <div>
+                            <strong>Anjali K.</strong>
+                            <span class="reviewer-badge">Verified Buyer</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★☆</div>
+                    <p class="review-text">"The Minimalist Vitamin C serum is a game changer for my skin. Visible glow in just 2 weeks. Packaging is great and delivery was quick."</p>
+                    <span class="review-product">Minimalist Vitamin C Serum</span>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar rv4">M</div>
+                        <div>
+                            <strong>Mohammed A.</strong>
+                            <span class="reviewer-badge">Verified Buyer</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Vaypari's return policy is super easy. Had to exchange the shirt size and it was done in 3 days. Customer support was very helpful!"</p>
+                    <span class="review-product">US Polo Casual Shirt</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TRUST BADGES ==================== -->
+        <section class="trust-strip container-fluid" aria-label="Trust indicators">
+            <div class="trust-item">
+                <span class="trust-emoji">🏅</span>
+                <div>
+                    <strong>100% Original</strong>
+                    <p>All products guaranteed authentic</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-emoji">🚚</span>
+                <div>
+                    <strong>Free Delivery</strong>
+                    <p>On orders above ₹499</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-emoji">🔄</span>
+                <div>
+                    <strong>Easy 30-Day Returns</strong>
+                    <p>No-questions-asked returns policy</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-emoji">🔒</span>
+                <div>
+                    <strong>Secure Payments</strong>
+                    <p>256-bit SSL encrypted checkout</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-emoji">📞</span>
+                <div>
+                    <strong>24/7 Support</strong>
+                    <p>Dedicated customer service team</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== APP DOWNLOAD & NEWSLETTER ==================== -->
+        <section class="app-newsletter-section" aria-label="App download and newsletter">
+            <div class="app-block container-fluid">
+                <div class="app-download">
+                    <div class="app-copy">
+                        <h3>Experience Vaypari on the App</h3>
+                        <p>Shop on the go with exclusive app-only deals, early access to sales, and personalised recommendations.</p>
+                        <div class="app-store-btns">
+                            <a href="#" class="app-store-btn">
+                                <span>🍎</span>
+                                <div><small>Download on the</small><strong>App Store</strong></div>
+                            </a>
+                            <a href="#" class="app-store-btn">
+                                <span>▶</span>
+                                <div><small>Get it on</small><strong>Google Play</strong></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="app-qr">
+                        <div class="qr-placeholder">
+                            <span>📱</span>
+                            <p>Scan to download</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="newsletter-block">
+                    <h3>Subscribe & Save 10%</h3>
+                    <p>Get exclusive deals, style guides, and first looks at new collections delivered straight to your inbox.</p>
+                    <form class="newsletter-form" id="newsletterForm" action="#" novalidate>
+                        <input type="email" id="newsletterEmail" placeholder="Your email address" aria-label="Email address" required />
+                        <button type="submit">Subscribe →</button>
+                    </form>
+                    <p class="newsletter-disclaimer">By subscribing, you agree to our Privacy Policy. Unsubscribe anytime.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FOOTER MAIN ==================== -->
+        <footer class="footer-main" aria-label="Site footer">
+            <div class="footer-top container-fluid">
+                <div class="footer-brand-col">
+                    <a href="#" class="footer-logo">vaypari</a>
+                    <p class="footer-brand-desc">India's leading fashion & lifestyle destination. Style that speaks to every Indian.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Instagram">📸 Instagram</a>
+                        <a href="#" class="social-link" aria-label="Facebook">👍 Facebook</a>
+                        <a href="#" class="social-link" aria-label="YouTube">▶ YouTube</a>
+                        <a href="#" class="social-link" aria-label="Pinterest">📌 Pinterest</a>
+                    </div>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4>Customer Service</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Track Your Order</a>
+                        <a href="#">Returns & Exchanges</a>
+                        <a href="#">Cancel an Order</a>
+                        <a href="#">Report a Concern</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Shop</h4>
+                        <a href="#">Women's Fashion</a>
+                        <a href="#">Men's Fashion</a>
+                        <a href="#">Kids & Baby</a>
+                        <a href="#">Beauty & Wellness</a>
+                        <a href="#">Home & Living</a>
+                        <a href="#">Sports & Outdoors</a>
+                        <a href="#">Accessories</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>About Us</h4>
+                        <a href="#">Our Story</a>
+                        <a href="#">Careers at Vaypari</a>
+                        <a href="#">Press & Media</a>
+                        <a href="#">Investor Relations</a>
+                        <a href="#">Sustainability</a>
+                        <a href="#">Corporate Gifting</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Sell on Vaypari</h4>
+                        <a href="#">Become a Seller</a>
+                        <a href="#">Advertise With Us</a>
+                        <a href="#">Vaypari Affiliate</a>
+                        <a href="#">Vendor Guidelines</a>
+                        <a href="#">Seller Dashboard</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom container-fluid">
+                <div class="footer-bottom-left">
+                    <p>© 2026 Vaypari Technologies Pvt. Ltd. All rights reserved.</p>
+                    <div class="footer-legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <span>|</span>
+                        <a href="#">Terms of Use</a>
+                        <span>|</span>
+                        <a href="#">Cookie Policy</a>
+                        <span>|</span>
+                        <a href="#">Accessibility</a>
+                    </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- ==================== MOBILE MENU ==================== -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-header">
+            <span class="mobile-logo">vaypari</span>
+            <button class="close-menu" id="closeMenu" aria-label="Close menu">✕</button>
+        </div>
+        <div class="mobile-menu-body">
+            <div class="mobile-auth-row">
+                <a href="#" class="mobile-login-btn">Login / Signup</a>
+            </div>
+            <div class="mobile-menu-section">
+                <h3>Shop By Category</h3>
+                <a href="#" class="mobile-menu-item">👗 Women</a>
+                <a href="#" class="mobile-menu-item">👔 Men</a>
+                <a href="#" class="mobile-menu-item">🧒 Kids</a>
+                <a href="#" class="mobile-menu-item">💄 Beauty</a>
+                <a href="#" class="mobile-menu-item">🛋️ Home & Living</a>
+                <a href="#" class="mobile-menu-item">⚽ Sports</a>
+                <a href="#" class="mobile-menu-item">💍 Accessories</a>
+                <a href="#" class="mobile-menu-item sale-item">🔥 SALE</a>
+            </div>
+            <hr class="menu-divider" />
+            <div class="mobile-menu-section">
+                <h3>My Account</h3>
+                <a href="orders.html" class="mobile-menu-item">📦 My Orders</a>
+                <a href="#" class="mobile-menu-item">❤️ My Wishlist</a>
+                <a href="#" class="mobile-menu-item">🛍️ My Bag</a>
+                <a href="coupons.html" class="mobile-menu-item">🎫 My Coupons</a>
+            </div>
+            <hr class="menu-divider" />
+            <div class="mobile-menu-section">
+                <a href="#" class="mobile-menu-item">📞 Customer Care</a>
+                <a href="#" class="mobile-menu-item">🏪 Sell on Vaypari</a>
+            </div>
+        </div>
+    </div>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ==================== BACK TO TOP ==================== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+</body>
+</html>
