@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vaypari - India's leading online fashion & lifestyle destination. Shop Men, Women, Kids, Beauty, Home & more." />
+    <meta name="keywords" content="fashion, online shopping, clothing, shoes, accessories, beauty, home decor, India" />
+    <meta name="author" content="Vaypari" />
+    <meta name="theme-color" content="#ff3f6c" />
+    <title>Account Settings - Vaypari Account</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==================== SMOOTH BACKGROUND (CITY SKYLINE) ==================== -->
+    <div class="wrap-bg" id="smooth-bg">
+        <div class="bg_area">
+            <div class="bg01 clearfix"></div>
+        </div>
+    </div>
+    <!-- ==================== PRELOADER ==================== -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-holder">
+            <!-- 16 circles for the animation -->
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+    </div>
+
+    <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
+    <div class="announcement-bar" id="announcementBar">
+        <div class="announcement-inner">
+            <span class="announcement-item">🎉 NEW ARRIVALS — Monsoon Collection is LIVE!</span>
+            <span class="announcement-sep">•</span>
+            <span class="announcement-item">🚚 FREE delivery on orders above ₹499</span>
+            <span class="announcement-sep">•</span>
+            <span class="announcement-item">🔁 Easy 30-Day Returns</span>
+            <span class="announcement-sep">•</span>
+            <span class="announcement-item">💳 10% off with HDFC cards — Use: HDFC10</span>
+        </div>
+        <button class="announcement-close" id="announcementClose" aria-label="Close announcement">✕</button>
+    </div>
+
+    <!-- ==================== MAIN HEADER ==================== -->
+    <header class="main-header" id="mainHeader">
+        <div class="header-inner">
+
+            <!-- Hamburger (Mobile) -->
+            <button class="hamburger-menu" id="hamburger" aria-label="Open menu" type="button">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- Logo -->
+            <a href="Front.html" class="logo" aria-label="Vaypari Home">
+                <span class="logo-text">vaypari</span>
+                <span class="logo-tag">India's Fashion Hub</span>
+            </a>
+
+            <!-- Search -->
+            <div class="search-wrapper search-animated">
+                <span class="search-icon">🔍</span>
+                <input id="searchInput" type="text" class="search-input" placeholder="Search for products, brands and more" autocomplete="off" />
+                <div class="search-suggestions" id="searchSuggestions">
+                    <div class="suggestion-group">
+                        <p class="suggestion-label">TRENDING SEARCHES</p>
+                        <a href="#" class="suggestion-item">👗 Ethnic Wear for Women</a>
+                        <a href="#" class="suggestion-item">👟 Sports Shoes for Men</a>
+                        <a href="#" class="suggestion-item">💄 Lipstick Collections</a>
+                        <a href="#" class="suggestion-item">🛋️ Home Décor Essentials</a>
+                        <a href="#" class="suggestion-item">👜 Handbags & Wallets</a>
+                    </div>
+                </div>
+                <button type="button" class="search-btn" id="searchBtn">SEARCH</button>
+            </div>
+
+            <!-- Right Icons -->
+            <nav class="header-actions" aria-label="User actions">
+                <div class="action-item" id="profileDropdownTrigger">
+                    <span class="action-icon">👤</span>
+                    <span class="action-label">Profile</span>
+                    <div class="profile-dropdown" id="profileDropdown">
+                        <div class="profile-header">
+                            <p>Hello!</p>
+                            <p class="profile-sub">Access account & manage orders</p>
+                        </div>
+                        <div class="profile-links">
+                            <a href="orders.html">📦 My Orders</a>
+                            <a href="reviews.html">💬 My Reviews & Ratings</a>
+                            <a href="qa.html">❓ My Questions & Answers</a>
+                            <a href="coupons.html">🎫 My Coupons</a>
+                            <a href="credit.html">🎁 Vaypari Credit</a>
+                            <a href="settings.html">⚙️ Account Settings</a>
+                        </div>
+                        <div class="profile-footer">
+                            <a href="#" class="profile-login-btn">LOGIN / SIGNUP</a>
+                            <span>Seller: <a href="#">Sell on Vaypari</a></span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="action-item wishlist">
+                    <span class="action-icon">❤️</span>
+                    <span class="action-label">Wishlist</span>
+                    <span class="wishlist-count" id="wishlistCount">0</span>
+                </a>
+                <a href="#" class="action-item cart-action">
+                    <span class="action-icon">🛍️</span>
+                    <span class="action-label">Bag</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- ==================== NAVIGATION BAR ==================== -->
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="nav-inner">
+                <div class="nav-item nav-dropdown" data-cat="men">
+                    <a href="#" class="nav-link">Men</a>
+                    <div class="mega-dropdown">
+                        <div class="mega-col">
+                            <h4>Top Wear</h4>
+                            <a href="#">T-Shirts</a><a href="#">Casual Shirts</a><a href="#">Formal Shirts</a>
+                            <a href="#">Sweatshirts</a><a href="#">Hoodies</a><a href="#">Jackets & Coats</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Bottom Wear</h4>
+                            <a href="#">Jeans</a><a href="#">Casual Trousers</a><a href="#">Formal Trousers</a>
+                            <a href="#">Shorts</a><a href="#">Track Pants</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Ethnic Wear</h4>
+                            <a href="#">Kurtas & Kurta Sets</a><a href="#">Sherwanis</a><a href="#">Ethnic Jackets</a>
+                            <a href="#">Mundus</a><a href="#">Nehru Jackets</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Footwear</h4>
+                            <a href="#">Casual Shoes</a><a href="#">Sports Shoes</a><a href="#">Formal Shoes</a>
+                            <a href="#">Sandals & Floaters</a><a href="#">Loafers & Moccasins</a>
+                        </div>
+                        <div class="mega-col mega-brands">
+                            <h4>Top Brands</h4>
+                            <a href="#" class="brand-pill">H&M</a>
+                            <a href="#" class="brand-pill">Puma</a>
+                            <a href="#" class="brand-pill">Zara</a>
+                            <a href="#" class="brand-pill">Nike</a>
+                            <a href="#" class="brand-pill">Levi's</a>
+                            <a href="#" class="brand-pill">US Polo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-dropdown" data-cat="women">
+                    <a href="#" class="nav-link">Women</a>
+                    <div class="mega-dropdown">
+                        <div class="mega-col">
+                            <h4>Indian & Fusion</h4>
+                            <a href="#">Kurtas & Suits</a><a href="#">Sarees</a><a href="#">Lehengas</a>
+                            <a href="#">Salwar Suits</a><a href="#">Ethnic Jackets</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Western Wear</h4>
+                            <a href="#">Dresses</a><a href="#">Tops</a><a href="#">T-Shirts</a>
+                            <a href="#">Jeans</a><a href="#">Trousers & Capris</a><a href="#">Co-ords</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Footwear</h4>
+                            <a href="#">Heels</a><a href="#">Flats</a><a href="#">Sandals</a>
+                            <a href="#">Boots</a><a href="#">Sports Shoes</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Accessories</h4>
+                            <a href="#">Handbags</a><a href="#">Jewellery</a><a href="#">Watches</a>
+                            <a href="#">Sunglasses</a><a href="#">Belts</a>
+                        </div>
+                        <div class="mega-col mega-brands">
+                            <h4>Top Brands</h4>
+                            <a href="#" class="brand-pill">Libas</a>
+                            <a href="#" class="brand-pill">AND</a>
+                            <a href="#" class="brand-pill">W</a>
+                            <a href="#" class="brand-pill">Biba</a>
+                            <a href="#" class="brand-pill">Global Desi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-dropdown" data-cat="kids">
+                    <a href="#" class="nav-link">Kids</a>
+                    <div class="mega-dropdown">
+                        <div class="mega-col">
+                            <h4>Boys Clothing</h4>
+                            <a href="#">T-Shirts</a><a href="#">Shirts</a><a href="#">Shorts</a><a href="#">Jeans</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Girls Clothing</h4>
+                            <a href="#">Dresses</a><a href="#">Tops</a><a href="#">Ethnic Sets</a><a href="#">Jeans</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Footwear & More</h4>
+                            <a href="#">School Shoes</a><a href="#">Sandals</a><a href="#">Toys</a><a href="#">Baby Care</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-dropdown" data-cat="home">
+                    <a href="#" class="nav-link">Home & Living</a>
+                    <div class="mega-dropdown">
+                        <div class="mega-col">
+                            <h4>Bed & Bath</h4>
+                            <a href="#">Bedsheets</a><a href="#">Blankets</a><a href="#">Towels</a><a href="#">Pillows</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Kitchen</h4>
+                            <a href="#">Cookware</a><a href="#">Storage</a><a href="#">Dinnerware</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Décor</h4>
+                            <a href="#">Wall Art</a><a href="#">Candles</a><a href="#">Vases</a><a href="#">Clocks</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-dropdown" data-cat="beauty">
+                    <a href="#" class="nav-link">Beauty</a>
+                    <div class="mega-dropdown">
+                        <div class="mega-col">
+                            <h4>Skincare</h4>
+                            <a href="#">Face Wash</a><a href="#">Moisturiser</a><a href="#">Sunscreen</a><a href="#">Serums</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Makeup</h4>
+                            <a href="#">Lipstick</a><a href="#">Foundation</a><a href="#">Mascara</a><a href="#">Eyeliner</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Haircare</h4>
+                            <a href="#">Shampoo</a><a href="#">Conditioner</a><a href="#">Hair Oil</a><a href="#">Serums</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="#" class="nav-link">Sports</a></div>
+                <div class="nav-item"><a href="#" class="nav-link">Luggage</a></div>
+                <div class="nav-item nav-sale"><a href="#" class="nav-link">SALE 🔥</a></div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <!-- ==================== ACCOUNT LAYOUT ==================== -->
+    <main class="page-content">
+        <div class="account-container">
+            
+        <aside class="account-sidebar">
+            <div class="account-user">
+                <div class="account-avatar">V</div>
+                <div class="account-user-info">
+                    <h3>Vaypari User</h3>
+                    <p>user@vaypari.com</p>
+                </div>
+            </div>
+            <nav class="account-nav">
+                <a href="orders.html" class="account-nav-item ">📦 My Orders</a>
+                <a href="reviews.html" class="account-nav-item ">💬 My Reviews & Ratings</a>
+                <a href="qa.html" class="account-nav-item ">❓ My Questions & Answers</a>
+                <a href="coupons.html" class="account-nav-item ">🎫 My Coupons</a>
+                <a href="credit.html" class="account-nav-item ">🎁 Vaypari Credit</a>
+                <a href="settings.html" class="account-nav-item active">⚙️ Account Settings</a>
+
+            </nav>
+        </aside>
+
+            <div class="account-content">
+                
+            <h2>Account Settings</h2>
+            <div class="mock-setting-card reveal-up" style="flex-direction: column; align-items: flex-start; gap: 15px;">
+                <h4>Profile Information</h4>
+                <input type="text" value="Vaypari User" class="search-input" style="width: 100%; max-width: 400px; padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-sm);" />
+                <input type="email" value="user@vaypari.com" class="search-input" style="width: 100%; max-width: 400px; padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-sm);" />
+                <button class="mock-btn">Save Changes</button>
+            </div>
+        
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">undefined
